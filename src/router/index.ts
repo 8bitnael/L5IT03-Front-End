@@ -8,31 +8,31 @@ const routes = [
     children: [
       {
         path: '',
-        name: 'HOME',
-        component: () => import('@/views/Home.vue'),
+        name: 'LOGIN',
+        component: () => import('@/views/login.vue'),
       }
     ],
   },
 
   {
-    path: '/About',
+    path: '/customize',
     component: () => import('@/layouts/default/Default.vue'),
     children: [
       {
         path: '',
-        name: 'ABOUT',
-        component: () => import('@/views/About.vue'),
+        name: 'CUSTOMIZE(2.1)',
+        component: () => import('@/views/customize.vue'),
       }
     ],
   },
   {
-    path: '/l5it03',
+    path: '/crud',
     component: () => import('@/layouts/default/Default.vue'),
     children: [
       {
         path: '',
-        name: 'L5IT03',
-        component: () => import('@/views/l5it03.vue'),
+        name: 'EMPLOYEE CRUD(2.2,2.3)',
+        component: () => import('@/views/crud.vue'),
       }
     ],
   },

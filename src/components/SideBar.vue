@@ -14,21 +14,6 @@
       </v-list>
     </v-card>
     <v-divider></v-divider>
-
-    <v-list>
-      <v-list-item title="FACEBOOK" prepend-icon="mdi-facebook" href="https://www.facebook.com/Vdanael" target="_blank">
-      </v-list-item>
-      <v-list-item title="LINKEDIN" prepend-icon="mdi-linkedin"
-        href="https://www.linkedin.com/in/daniele-castrovinci-a0446014/" target="_blank">
-      </v-list-item>
-       <v-list-item title="GITHUB" prepend-icon="mdi-github"
-        href="https://github.com/8bitnael" target="_blank">
-      </v-list-item>
-    </v-list>
-    <v-divider></v-divider>
-
-
-
   </VNavigationDrawer>
 </template>
 
