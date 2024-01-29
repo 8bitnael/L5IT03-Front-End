@@ -1,19 +1,24 @@
 {
     "items": [
         {
-            "icon": "mdi-home-variant",
+            "icon": "mdi-login",
             "title": "LOGIN",
             "route": "/"
         },
         {
-            "icon": "mdi mdi-information",
+            "icon": "mdi-tooltip-edit",
             "title": "CUSTOMIZE",
             "route": "/customize"
         },
         {
-            "icon": "mdi-account-multiple-plus",
+            "icon": "mdi-star-circle",
             "title": "CRUD",
             "route": "/crud"
+        },
+        {
+            "icon": "mdi-logout",
+            "title": "LOGOUT",
+            "route": "/logout"
         }
     ]
 }
