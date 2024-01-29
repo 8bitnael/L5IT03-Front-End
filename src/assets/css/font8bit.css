@@ -1,0 +1,17 @@
+@font-face {
+  font-family: '8bitFont';
+  src: url('../fonts/8-bitIn.ttf') format('truetype');
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: '8bitFont', sans-serif;
+}
+
+.font-8bit .v-list-item__title .div {
+  font-family: '8bitFont', sans-serif;
+}
+
+.font-lucida {
+  font-family: "Lucida Console", monospace;
+}
+ 

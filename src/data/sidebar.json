@@ -1,0 +1,19 @@
+{
+    "items": [
+        {
+            "icon": "mdi-home-variant",
+            "title": "HOME",
+            "route": "/"
+        },
+        {
+            "icon": "mdi mdi-information",
+            "title": "ABOUT ME",
+            "route": "/about"
+        },
+        {
+            "icon": "mdi-account-multiple-plus",
+            "title": "L5IT03",
+            "route": "/l5it03"
+        }
+    ]
+}
