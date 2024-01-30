@@ -8,12 +8,35 @@
   </v-app>
 </template>
 
-<script lang="ts" setup>
-
+<script setup>
+import firebase from "firebase";
 import SideBar from "./components/SideBar.vue";
-//import Footer from "./components/Footer.vue";
+import Footer from "./components/Footer.vue";
 import '@/assets/css/font8bit.css';
- 
+</script>
+
+<script>
+export default {
+  components: {
+  },
+  data() {
+    return {
+      isAuthenticated: false,
+    };
+  },
+  created() {
+    // Controlla lo stato di autenticazione all'avvio dell'applicazione
+    firebase.auth().onAuthStateChanged((user) => {
+      this.isAuthenticated = user !== null;
+    });
+  },
+  mounted() {},
+  methods: {
+    logout() {
+     
+    },
+  },
+};
 </script>
 
 <style>
