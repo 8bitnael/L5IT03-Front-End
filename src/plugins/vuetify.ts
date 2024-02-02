@@ -5,7 +5,6 @@ import 'vuetify/styles'
 // Composables
 import { createVuetify } from 'vuetify'
 
-// Custom theme properties
 const customDarkTheme = {
   dark: true,
   colors: {
@@ -13,18 +12,27 @@ const customDarkTheme = {
     surface: "#15202b",
     primary: "#3f51b5",
     secondary: "#03dac6",
-    error: "#f44336",
-    info: "#2196F3",
-    success: "#4caf50",
-    warning: "#fb8c00",
+    error: "#ff5722",
   },
 };
-  
+
+const customLightTheme = {
+  dark: false,
+  colors: {
+    background: "#eee",
+    surface: "#15202b",
+    primary: "#3f51b5",
+    secondary: "#00ccff",
+    error: "#ffcc00",
+  },
+};
+
 export default createVuetify({
   theme: {
-    defaultTheme: "customDarkTheme",
+    defaultTheme: "light",
     themes: {
       customDarkTheme,
+      customLightTheme,
     },
   },
 });

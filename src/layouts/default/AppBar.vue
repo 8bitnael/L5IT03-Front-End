@@ -1,5 +1,5 @@
 <template>
-  <v-app-bar scroll-threshold="578">
+  <v-app-bar>
     <v-toolbar>
       <v-toolbar-title class="font-lucida centered-title">
         {{ $route.name }}

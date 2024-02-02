@@ -19,7 +19,7 @@
         <v-col
           cols="12"
           class="align-center"
-          >&copy; 2023 Vdanael</v-col
+          >&copy; 2024 Daniele Castrovinci</v-col
         >
       </v-row>
     </v-footer>
