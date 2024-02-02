@@ -16,6 +16,12 @@
           <v-list-item v-if="isAuthenticated" v-for="item in items" :key="item.value" :prepend-icon="item.icon" :title="item.title"
             :value="item.value"  link @click="$router.push({ path: item.route })" />
         </v-list-item-group>
+       
+        <v-list-item-group v-model="model" active-class="border" color="primary"> 
+          <v-list-item v-if="isAuthenticated" v-for="item in itemLogout" :key="item.value" :prepend-icon="item.icon" :title="item.title"
+            :value="item.value"  link  @click="logout" />
+        </v-list-item-group>
+
       </v-list>
  
     </v-card>
@@ -26,6 +32,7 @@
 <script>
 import sidebar from "../data/sidebar.json";
 import sidebarNoAuth from "../data/sidebarNoAuth.json";
+import logout from "../data/sidebarLogout.json";
  
 export default {
   name: "sidebar",
@@ -39,6 +46,7 @@ export default {
       name: "MenuDrawer",
       items: sidebar.items,
       itemsNoAuth: sidebarNoAuth.items,
+      itemLogout: logout.item, 
     }
   }
 }

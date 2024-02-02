@@ -37,12 +37,6 @@ export default {
         .auth()
         .signOut()
         .then(() => {
-          const modalComponent = new Vue(modal);
-          modalComponent.$mount();
-          modalComponent.showModal(
-            "Authentication",
-            "Successfully logged out!"
-          );
           localStorage.removeItem("uuid");
           this.$router.push("/");
         })
