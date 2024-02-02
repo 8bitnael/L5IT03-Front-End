@@ -1,5 +1,14 @@
 <template>
-   
+    <v-app>
+      <v-container>
+        <v-card class="mb-12" color="surface-variant" variant="tonal">
+          <v-card-text class="text-medium-emphasis text-caption">
+            C.Enter employee ID and view employee information within the same page (2.2,2.3)<br>
+            D.Update and save employee informatione.Mobile friendly (2.1)
+          </v-card-text>
+        </v-card>
+      </v-container>
+    </v-app>
 </template>
 
 <script>

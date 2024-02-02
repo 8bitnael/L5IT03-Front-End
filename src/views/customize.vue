@@ -1,12 +1,15 @@
 <template>
     <v-container class="fill-height">
+      <v-card class="mb-12" color="surface-variant" variant="tonal">
+          <v-card-text class="text-medium-emphasis text-caption">
+            A.Attractive web interface where each department can customize their theme accordingly (2.1)<br>
+          </v-card-text>
+      </v-card>
+
       <v-responsive class="d-flex align-center text-center fill-height">
-        <div class="text-body-2 font-weight-light mb-n1">Department Theme customization</div>
-  
-        <h1 class="text-h2 font-weight-bold">Customize theme accordingly (2.1)</h1>
-  
+        <div class="text-body-2 font-weight-light mb-n1">Department</div>
+        <h1 class="text-h2 font-weight-bold">Theme customization (2.1)</h1>
         <div class="py-5" />
-  
         <v-row class="d-flex align-center justify-center">
           <v-col cols="auto"> <v-btn color="primary"> Primary </v-btn> </v-col>
           <v-col cols="auto">
@@ -14,9 +17,7 @@
           </v-col>
           <v-col cols="auto"> <v-btn color="error"> Error </v-btn> </v-col>
         </v-row>
-  
         <div class="py-5" />
-  
         <v-row class="d-flex align-center justify-center">
           <v-col cols="4">
             <v-select
