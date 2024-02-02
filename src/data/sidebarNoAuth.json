@@ -1,0 +1,9 @@
+{
+    "items": [
+        {
+            "icon": "mdi-login",
+            "title": "LOGIN",
+            "route": "/"
+        } 
+    ]
+}

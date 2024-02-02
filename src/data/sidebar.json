@@ -1,11 +1,6 @@
 {
     "items": [
         {
-            "icon": "mdi-login",
-            "title": "LOGIN",
-            "route": "/"
-        },
-        {
             "icon": "mdi-tooltip-edit",
             "title": "CUSTOMIZE",
             "route": "/customize"

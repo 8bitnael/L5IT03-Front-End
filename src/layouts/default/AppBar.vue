@@ -1,5 +1,5 @@
 <template>
-  <v-app-bar app color="light">
+  <v-app-bar >
     <v-toolbar>
       <v-toolbar-title class="font-lucida centered-title">
         {{ $route.name }}

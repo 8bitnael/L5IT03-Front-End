@@ -1,6 +1,6 @@
 <template>
   <v-app fixed>
-    <SideBar/> 
+    <SideBar :isAuthenticated="isAuthenticated" :logout="logout"/> 
     <v-main>
       <router-view />
     </v-main>
@@ -12,7 +12,7 @@
 import firebase from "firebase";
 import SideBar from "./components/SideBar.vue";
 import Footer from "./components/Footer.vue";
-import '@/assets/css/font8bit.css';
+
 </script>
 
 <script>
@@ -33,7 +33,23 @@ export default {
   mounted() {},
   methods: {
     logout() {
-     
+      firebase
+        .auth()
+        .signOut()
+        .then(() => {
+          const modalComponent = new Vue(modal);
+          modalComponent.$mount();
+          modalComponent.showModal(
+            "Authentication",
+            "Successfully logged out!"
+          );
+          localStorage.removeItem("uuid");
+          this.$router.push("/");
+        })
+        .catch((error) => {
+          alert(error.message);
+          this.$router.push("/");
+        });
     },
   },
 };
