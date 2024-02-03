@@ -1,21 +1,34 @@
 <template>
+    <div id="app">
+    <v-app>
+      <v-container>
+ 
   <div class="dashboard">
     <table>
       <thead>
         <tr>
           <th>Employee Id</th>
           <th>Name</th>
+          <th>Surname</th>
           <th>Department</th>
           <th></th>
         </tr>
       </thead>
       <tbody>
-         
+        <tr v-for="employee in employees" :key="employee.id">
+          <td>{{ employee.empId }}</td>
+          <td>{{ employee.name }}</td>
+          <td>{{ employee.surname }}</td>
+          <td>{{ employee.department }}</td>
+          <td>
+          </td>
+        </tr>
       </tbody>
     </table>
-
-    
-  </div>
+    </div>
+    </v-container>
+    </v-app>
+    </div>
 </template>
 
 <script>
@@ -30,7 +43,21 @@ export default {
   },
   methods: {},
   created() {
-  
+    const db = firebase.firestore();
+    // Funzione per ottenere tutti gli employee dalla collezione "employees"
+    const getAllEmployees = async () => {
+      try {
+        const employeesCollection = await db.collection('employees').get();
+        this.employees = employeesCollection.docs.map((doc) => ({
+          id: doc.id,
+          ...doc.data(),
+        }));
+      } catch (error) {
+        console.error('Errore durante il recupero degli employee:', error);
+      }
+    };
+    // Chiama la funzione per ottenere gli employee al momento della creazione del componente
+    getAllEmployees();
   },
 };
 </script>

@@ -1,14 +1,14 @@
 {
     "items": [
         {
-            "icon": "mdi-tooltip-edit",
-            "title": "CUSTOMIZE",
+            "icon": "mdi-format-paint",
+            "title": "CUSTOMIZE THEME",
             "route": "/customize"
         },
         {
-            "icon": "mdi-star-circle",
-            "title": "CRUD",
-            "route": "/crud"
+            "icon": "mdi-format-list-bulleted",
+            "title": "ALL EMPLOYEES (*)",
+            "route": "/getAllEmployes.vue"
         }
     ]
 }
