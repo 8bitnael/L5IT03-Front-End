@@ -173,8 +173,12 @@ th {
     text-align: center;
 }
 
+tr {
+  background-color: rgb(135, 134, 134);
+}
+
 tr:hover {
-    background-color: lightgrey;
+  background-color: rgb(81, 81, 81);
 }
 
 td {
