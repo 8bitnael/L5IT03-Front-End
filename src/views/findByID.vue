@@ -1,6 +1,10 @@
 <template>
-  <!-- ... il resto del tuo template ... -->
-  <!-- Input e pulsante per cercare un employee per empId -->
+    <v-container > 
+     <v-card class="mb-12" color="surface-variant" variant="tonal">
+          <v-card-text class="text-medium-emphasis text-caption">
+            C.Enter employee ID and view employee information within the same page (2.2,2.3)<br>
+          </v-card-text>
+      </v-card>
   <v-row>
     <v-col cols="12">
       <v-text-field v-model="employeeIdToFind" label="Employee ID"></v-text-field>
@@ -20,17 +24,15 @@
       <p>Department: {{ foundEmployee.department }}</p>
     </v-col>
   </v-row>
-  <!-- ... il resto del tuo template ... -->
+</v-container>
 </template>
 
 <script>
 import firebase from "firebase";
 
 export default {
-  // ... il resto del tuo script ...
   data() {
     return {
-      // ... il resto dei tuoi dati ...
       employeeIdToFind: "",
       foundEmployee: null,
     };
