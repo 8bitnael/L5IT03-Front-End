@@ -1,34 +1,36 @@
 <template>
-    <div id="app">
+  <div id="app">
     <v-app>
       <v-container>
- 
-  <div class="dashboard">
-    <table>
-      <thead>
-        <tr>
-          <th>Employee Id</th>
-          <th>Name</th>
-          <th>Surname</th>
-          <th>Department</th>
-          <th></th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr v-for="employee in employees" :key="employee.id">
-          <td>{{ employee.empId }}</td>
-          <td>{{ employee.name }}</td>
-          <td>{{ employee.surname }}</td>
-          <td>{{ employee.department }}</td>
-          <td>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-    </div>
-    </v-container>
+        <div class="dashboard">
+          <table>
+            <thead>
+              <tr>
+                <th>Employee Id</th>
+                <th>Name</th>
+                <th>Surname</th>
+                <th>Department</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr v-for="employee in employees" :key="employee.id">
+                <td>{{ employee.empId }}</td>
+                <td>{{ employee.name }}</td>
+                <td>{{ employee.surname }}</td>
+                <td>{{ employee.department }}</td>
+                <td>
+                  <v-btn @click="deleteEmployee(employee.id)" color="error" icon>
+                    <v-icon>mdi-delete</v-icon>
+                  </v-btn>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </v-container>
     </v-app>
-    </div>
+  </div>
 </template>
 
 <script>
@@ -41,12 +43,20 @@ export default {
       employees: [],
     };
   },
-  methods: {},
-  created() {
-    const db = firebase.firestore();
-    // Funzione per ottenere tutti gli employee dalla collezione "employees"
-    const getAllEmployees = async () => {
+  methods: {
+    async deleteEmployee(employeeId) {
       try {
+        const db = firebase.firestore();
+        await db.collection("employees").doc(employeeId).delete();
+        // Aggiorna la lista degli employee dopo l'eliminazione
+        this.employees = this.employees.filter((employee) => employee.id !== employeeId);
+      } catch (error) {
+        console.error('Errore durante l\'eliminazione dell\'employee:', error);
+      }
+    },
+    async getAllEmployees() {
+      try {
+        const db = firebase.firestore();
         const employeesCollection = await db.collection('employees').get();
         this.employees = employeesCollection.docs.map((doc) => ({
           id: doc.id,
@@ -55,9 +65,11 @@ export default {
       } catch (error) {
         console.error('Errore durante il recupero degli employee:', error);
       }
-    };
+    },
+  },
+  created() {
     // Chiama la funzione per ottenere gli employee al momento della creazione del componente
-    getAllEmployees();
+    this.getAllEmployees();
   },
 };
 </script>
