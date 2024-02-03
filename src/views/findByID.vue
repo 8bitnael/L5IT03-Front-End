@@ -1,0 +1,123 @@
+<template>
+  <!-- ... il resto del tuo template ... -->
+  <!-- Input e pulsante per cercare un employee per empId -->
+  <v-row>
+    <v-col cols="12">
+      <v-text-field v-model="employeeIdToFind" label="Employee ID"></v-text-field>
+    </v-col>
+    <v-col cols="12">
+      <v-btn @click="findEmployeeById" color="primary">Find Employee by ID</v-btn>
+    </v-col>
+  </v-row>
+
+  <!-- Visualizzazione dei dati dell'employee trovato -->
+  <v-row v-if="foundEmployee">
+    <v-col cols="12">
+      <h2>Employee Found</h2>
+      <p>Employee ID: {{ foundEmployee.empId }}</p>
+      <p>Name: {{ foundEmployee.name }}</p>
+      <p>Surname: {{ foundEmployee.surname }}</p>
+      <p>Department: {{ foundEmployee.department }}</p>
+    </v-col>
+  </v-row>
+  <!-- ... il resto del tuo template ... -->
+</template>
+
+<script>
+import firebase from "firebase";
+
+export default {
+  // ... il resto del tuo script ...
+  data() {
+    return {
+      // ... il resto dei tuoi dati ...
+      employeeIdToFind: "",
+      foundEmployee: null,
+    };
+  },
+  methods: {
+    // ... il resto dei tuoi metodi ...
+    async findEmployeeById() {
+      try {
+        const db = firebase.firestore();
+        const querySnapshot = await db.collection("employees")
+          .where("empId", "==", this.employeeIdToFind)
+          .get();
+
+        if (querySnapshot.docs.length > 0) {
+          // Trovato un employee con l'empId specificato
+          const foundEmployeeData = querySnapshot.docs[0].data();
+          this.foundEmployee = {
+            id: querySnapshot.docs[0].id,
+            ...foundEmployeeData,
+          };
+        } else {
+          // Nessun employee trovato con l'empId specificato
+          this.foundEmployee = null;
+        }
+      } catch (error) {
+        console.error('Errore durante la ricerca dell\'employee:', error);
+      }
+    },
+  },
+  // ... il resto del tuo script ...
+};
+</script>
+
+
+<style scoped>
+table {
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid teal;
+    border-radius: 3px;
+    background-color: #fff;
+    width: 50%;
+}
+
+th {
+    background-color: #555555;
+    color: white;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    text-align: center;
+}
+
+tr:hover {
+    background-color: lightgrey;
+}
+
+td {
+    text-align: center;
+}
+
+th,
+td {
+    min-width: 120px;
+    padding: 10px 20px;
+}
+
+router-link {
+    background-color: lightslategray;
+}
+
+.view {
+    padding: 10px 24px;
+    cursor: pointer;
+    text-align: center;
+    background-color: #008CBA;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 14px;
+}
+
+th:first-child {
+  min-width: 450px; /* Imposta la larghezza minima della colonna empId a 200px */
+}
+td:first-child {
+  min-width: 450px; /* Imposta la larghezza minima della colonna empId a 200px */
+}
+</style>

@@ -9,8 +9,12 @@
             "icon": "mdi-format-list-bulleted",
             "title": "ALL (SELECT *)",
             "route": "/getAllEmployes"
-        }
-        ,
+        },
+        {
+            "icon": "mdi-magnify-plus-outline",
+            "title": "FIND BY ID",
+            "route": "/findByID"
+        },
         {
             "icon": "mdi-dice-4",
             "title": "ADD, UPDATE & DELETE",

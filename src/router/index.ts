@@ -37,6 +37,17 @@ const routes = [
     ],
   },
   {
+    path: '/findByID',
+    component: () => import('@/layouts/default/Default.vue'),
+    children: [
+      {
+        path: '',
+        name: 'FIND BY ID',
+        component: () => import('@/views/findByID.vue'),
+      }
+    ],
+  },
+  {
     path: '/crud',
     component: () => import('@/layouts/default/Default.vue'),
     children: [
