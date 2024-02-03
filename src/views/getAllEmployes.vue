@@ -2,6 +2,11 @@
   <div id="app">
     <v-app>
       <v-container>
+        <v-card class="mb-12" color="surface-variant" variant="tonal">
+          <v-card-text class="text-medium-emphasis text-caption">
+           SELECT * FROM TABLE EMPLOYEES AND DELETE ACTION<br>
+          </v-card-text>
+        </v-card>
         <div class="dashboard">
           <table>
             <thead>

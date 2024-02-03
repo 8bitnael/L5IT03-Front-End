@@ -7,7 +7,7 @@
         },
         {
             "icon": "mdi-format-list-bulleted",
-            "title": "ALL EMPLOYEES (*)",
+            "title": "ALL EMPLOYEES (*) and DELETE",
             "route": "/getAllEmployes.vue"
         }
     ]
