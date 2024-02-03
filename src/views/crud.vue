@@ -1,34 +1,80 @@
 <template>
-    <v-app>
-      <v-container>
-        <v-card class="mb-12" color="surface-variant" variant="tonal">
-          <v-card-text class="text-medium-emphasis text-caption">
-            C.Enter employee ID and view employee information within the same page (2.2,2.3)<br>
-            D.Update and save employee informatione.Mobile friendly (2.1)
-          </v-card-text>
-        </v-card>
-      </v-container>
-    </v-app>
+  <div class="dashboard">
+    <table>
+      <thead>
+        <tr>
+          <th>Employee Id</th>
+          <th>Name</th>
+          <th>Department</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+         
+      </tbody>
+    </table>
+
+    
+  </div>
 </template>
 
 <script>
+import firebase from "firebase";
+
 export default {
+  name: "Dashboard",
   data() {
     return {
-      pageTitle: 'EMPTY',
-      desserts: [
-        ],
-    }
+      employees: [],
+    };
   },
-  mounted() {
-    // Eseguiamo del codice quando il componente viene montato
+  methods: {},
+  created() {
+  
   },
-  methods: {
-    // Qui possiamo definire i nostri metodi personalizzati
-  }
-}
+};
 </script>
 
 <style scoped>
-/* Aggiungiamo qui il nostro CSS personalizzato */
+table {
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid teal;
+  border-radius: 3px;
+  background-color: #fff;
+  width: 50%;
+}
+th {
+  background-color: #555555;
+  color: white;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  text-align: center;
+}
+tr:hover {
+  background-color: lightgrey;
+}
+td {
+  text-align: center;
+}
+th,
+td {
+  min-width: 120px;
+  padding: 10px 20px;
+}
+router-link {
+  background-color: lightslategray;
+}
+.view {
+  padding: 10px 24px;
+  cursor: pointer;
+  text-align: center;
+  background-color: #008CBA;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 14px;
+}
 </style>

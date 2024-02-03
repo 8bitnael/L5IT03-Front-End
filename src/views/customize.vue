@@ -7,8 +7,8 @@
       </v-card>
 
       <v-responsive class="d-flex align-center text-center fill-height">
-        <div class="text-body-2 font-weight-light mb-n1">Department</div>
-        <h1 class="text-h2 font-weight-bold">Theme customization (2.1)</h1>
+        <div class="text-body-2 font-weight-light mb-n1">Theme</div>
+        <h1 class="text-h2 font-weight-bold">Department customization (2.1)</h1>
         <div class="py-5" />
         <v-row class="d-flex align-center justify-center">
           <v-col cols="auto"> <v-btn color="primary"> Primary </v-btn> </v-col>
