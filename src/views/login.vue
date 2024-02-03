@@ -7,7 +7,6 @@
             Design web applications using ASP.NET and ADO.NET2.1:
             You are required to develop a web based solution for your organization to manage employee information. Using
             ASP.NET and ADO.NET develop the following functionalities.<br>
-            A.Attractive web interface where each department can customize their theme accordingly (2.1)<br>
             B.Assuming logins are already stored in the database, a login page for admins to login in each department
             (2.3)<br>
             C.Enter employee ID and view employee information within the same page (2.2,2.3)<br>

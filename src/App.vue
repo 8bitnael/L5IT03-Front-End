@@ -28,6 +28,9 @@ export default {
     // Controlla lo stato di autenticazione all'avvio dell'applicazione
     firebase.auth().onAuthStateChanged((user) => {
       this.isAuthenticated = user !== null;
+      if(this.isAuthenticated){
+        this.$router.push("/customize");
+      }
     });
   },
   mounted() {},
