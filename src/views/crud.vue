@@ -34,7 +34,7 @@
                     <table>
                         <thead>
                             <tr>
-                                <th>EmpId</th>
+                                <th>Employee ID</th>
                                 <th>Name</th>
                                 <th>Surname</th>
                                 <th>Department</th>
