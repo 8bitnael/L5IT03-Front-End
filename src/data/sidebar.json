@@ -7,8 +7,14 @@
         },
         {
             "icon": "mdi-format-list-bulleted",
-            "title": "ALL EMPLOYEES (*) and DELETE",
-            "route": "/getAllEmployes.vue"
+            "title": "ALL (SELECT *)",
+            "route": "/getAllEmployes"
+        }
+        ,
+        {
+            "icon": "mdi-dice-4",
+            "title": "ADD, UPDATE & DELETE",
+            "route": "/crud"
         }
     ]
 }

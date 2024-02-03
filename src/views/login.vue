@@ -10,7 +10,8 @@
             B.Assuming logins are already stored in the database, a login page for admins to login in each department
             (2.3)<br>
             C.Enter employee ID and view employee information within the same page (2.2,2.3)<br>
-            D.Update and save employee informatione.Mobile friendly (2.1)
+            D.Update and save employee informatione
+            E.Mobile friendly (2.1)
           </v-card-text>
         </v-card>
         <v-card  color="#B7C1B3" variant="tonal" class="text-center">

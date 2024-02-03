@@ -26,13 +26,24 @@ const routes = [
     ],
   },
   {
-    path: '/getAllEmployes.vue',
+    path: '/getAllEmployes',
     component: () => import('@/layouts/default/Default.vue'),
     children: [
       {
         path: '',
         name: 'GET ALL EMPLOYEES FROM DB',
         component: () => import('@/views/getAllEmployes.vue'),
+      }
+    ],
+  },
+  {
+    path: '/crud',
+    component: () => import('@/layouts/default/Default.vue'),
+    children: [
+      {
+        path: '',
+        name: 'ADD, UPDATE & DELETE EMPLOYEES',
+        component: () => import('@/views/crud.vue'),
       }
     ],
   },

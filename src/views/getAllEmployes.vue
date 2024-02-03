@@ -4,7 +4,7 @@
       <v-container>
         <v-card class="mb-12" color="surface-variant" variant="tonal">
           <v-card-text class="text-medium-emphasis text-caption">
-           SELECT * FROM TABLE EMPLOYEES AND DELETE ACTION<br>
+           SELECT * FROM TABLE EMPLOYEES<br>
           </v-card-text>
         </v-card>
         <div class="dashboard">
@@ -15,7 +15,7 @@
                 <th>Name</th>
                 <th>Surname</th>
                 <th>Department</th>
-                <th>Actions</th>
+              <!--  <th>Actions</th> -->
               </tr>
             </thead>
             <tbody>
@@ -24,11 +24,11 @@
                 <td>{{ employee.name }}</td>
                 <td>{{ employee.surname }}</td>
                 <td>{{ employee.department }}</td>
-                <td>
+             <!--   <td>
                   <v-btn @click="deleteEmployee(employee.id)" color="error" icon>
                     <v-icon>mdi-delete</v-icon>
                   </v-btn>
-                </td>
+                </td> -->
               </tr>
             </tbody>
           </table>
@@ -120,5 +120,12 @@ router-link {
   border-radius: 10px;
   color: #fff;
   font-size: 14px;
+}
+
+th:first-child {
+  min-width: 450px; /* Imposta la larghezza minima della colonna empId a 200px */
+}
+td:first-child {
+  min-width: 450px; /* Imposta la larghezza minima della colonna empId a 200px */
 }
 </style>
