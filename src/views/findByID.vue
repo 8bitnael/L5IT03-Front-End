@@ -120,12 +120,4 @@ router-link {
   font-size: 14px;
 }
 
-th:first-child {
-  min-width: 450px;
-  /* Imposta la larghezza minima della colonna empId a 200px */
-}
-
-td:first-child {
-  min-width: 450px;
-  /* Imposta la larghezza minima della colonna empId a 200px */
-}</style>
+</style>

@@ -93,8 +93,14 @@ export default {
         async addEmployee() {
             try {
                   // Genera un nuovo UUID per l'employee
-                this.newEmployee.empId = uuidv4();
+             
                 const db = firebase.firestore();
+                const employeesCollection = await db.collection('employees').get();
+                // Imposta l'ID del nuovo employee come size + 1
+                // this.newEmployee.empId = uuidv4();
+                this.newEmployee.empId = employeesCollection.size + 1;
+ 
+
                 await db.collection("employees").add(this.newEmployee);
                 this.addEmployeeDialog = false;
                 this.getAllEmployees();
@@ -205,10 +211,5 @@ router-link {
     font-size: 14px;
 }
 
-th:first-child {
-  min-width: 450px; /* Imposta la larghezza minima della colonna empId a 200px */
-}
-td:first-child {
-  min-width: 450px; /* Imposta la larghezza minima della colonna empId a 200px */
-}
+
 </style>
