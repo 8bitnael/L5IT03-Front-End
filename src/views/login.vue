@@ -4,32 +4,32 @@
       <v-container>
         <v-card class="mb-12" color="surface-variant" variant="tonal">
           <v-card-text class="text-medium-emphasis text-caption">
-            <b> Design web applications using ASP.NET and ADO.NET<br> 
-              2.1: You are required to develop a web based solution for your organization to manage employee information. Using
-            ASP.NET and ADO.NET develop the following functionalities.<br>
-            B.Assuming logins are already stored in the database, a login page for admins to login in each department
-            (2.3)<br>
-            C.Enter employee ID and view employee information within the same page (2.2,2.3)<br>
-            D.Update and save employee information<br>
-            E.Mobile friendly (2.1) </b>
+            <b> Design web applications using ASP.NET and ADO.NET<br>
+              2.1: You are required to develop a web based solution for your organization to manage employee information.
+              Using ASP.NET and ADO.NET develop the following functionalities.<br>
+              B.Assuming logins are already stored in the database, a login page for admins to login in each department
+              (2.3)<br>
+              C.Enter employee ID and view employee information within the same page (2.2,2.3)<br>
+              D.Update and save employee information<br>
+              E.Mobile friendly (2.1) </b>
           </v-card-text>
         </v-card>
-        <v-card  color="#B7C1B3" variant="tonal" class="text-center">
-        <form @submit.prevent="login">
-          <h2>Department Login  (2.3)</h2>
-          <div class="form-floating">
-            <input type="email" class="form-control" id="username" placeholder="Username/Email" required
-              v-model="email" />
-            <label for="floatingInput">Username</label>
-          </div>
-          <div class="form-floating">
-            <input type="password" class="form-control" id="password" placeholder="Password" v-model="password"
-              required />
-            <label for="floatingPassword">Password</label>
-          </div>
-          <button type="submit">Login</button>
-        </form>
-      </v-card>
+        <v-card color="#B7C1B3" variant="tonal" class="text-center">
+          <form @submit.prevent="login">
+            <h2>Department Login (2.3)</h2>
+            <div class="form-floating">
+              <input type="email" class="form-control" id="username" placeholder="Username/Email" required
+                v-model="email" />
+              <label for="floatingInput">Username</label>
+            </div>
+            <div class="form-floating">
+              <input type="password" class="form-control" id="password" placeholder="Password" v-model="password"
+                required />
+              <label for="floatingPassword">Password</label>
+            </div>
+            <button type="submit">Login</button>
+          </form>
+        </v-card>
 
       </v-container>
     </v-app>

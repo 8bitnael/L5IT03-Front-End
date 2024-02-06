@@ -4,21 +4,29 @@
       <v-container>
         <v-card class="mb-12" color="surface-variant" variant="tonal">
           <v-card-text class="text-medium-emphasis text-caption">
-            
-            <b> SQL QUERY: SELECT e.*, d.department_name FROM Employees e INNER JOIN Department d ON e.DepartmentId = d.department_id </b>
-           
+            <b> SQL QUERY: SELECT e.*, d.department_name FROM Employees e INNER JOIN Department d ON e.DepartmentId =
+              d.department_id </b>
           </v-card-text>
         </v-card>
         <div class="dashboard">
-          <table>
+          <v-table>
             <thead>
               <tr>
-                <th>Employee_Id</th>
-                <th>Name</th>
-                <th>Surname</th>
-                <th>Position</th>
-                <th>Department</th>
-              <!--  <th>Actions</th> -->
+                <th class="text-left">
+                  Employee_Id
+                </th>
+                <th class="text-left">
+                  Name
+                </th>
+                <th class="text-left">
+                  Surname
+                </th>
+                <th class="text-left">
+                  Position
+                </th>
+                <th class="text-left">
+                  Department
+                </th>
               </tr>
             </thead>
             <tbody>
@@ -28,22 +36,23 @@
                 <td>{{ employee.surname }}</td>
                 <td>{{ employee.position }}</td>
                 <td>{{ employee.department }}</td>
-             <!--   <td>
-                  <v-btn @click="deleteEmployee(employee.id)" color="error" icon>
-                    <v-icon>mdi-delete</v-icon>
-                  </v-btn>
-                </td> -->
               </tr>
             </tbody>
-          </table>
+          </v-table>
         </div>
       </v-container>
     </v-app>
   </div>
 </template>
 
+<script setup>
+
+</script>
+
+
 <script>
 import firebase from "firebase";
+
 
 export default {
   name: "Dashboard",
@@ -93,6 +102,7 @@ table {
   background-color: #fff;
   width: 50%;
 }
+
 th {
   background-color: #555555;
   color: white;
@@ -102,6 +112,7 @@ th {
   user-select: none;
   text-align: center;
 }
+
 tr {
   background-color: rgb(135, 134, 134);
 }
@@ -109,17 +120,21 @@ tr {
 tr:hover {
   background-color: rgb(81, 81, 81);
 }
+
 td {
   text-align: center;
 }
+
 th,
 td {
   min-width: 120px;
   padding: 10px 20px;
 }
+
 router-link {
   background-color: lightslategray;
 }
+
 .view {
   padding: 10px 24px;
   cursor: pointer;
@@ -129,5 +144,4 @@ router-link {
   color: #fff;
   font-size: 14px;
 }
-
 </style>

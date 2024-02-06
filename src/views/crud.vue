@@ -59,26 +59,40 @@
   
           <!-- Tabella degli employees -->
           <div class="dashboard">
-            <table>
-              <thead>
-                <tr>
-                  <th>Employee ID</th>
-                  <th>Name</th>
-                  <th>Surname</th>
-                  <th>Department</th>
-                  <th>Position</th>
-                  <th>Update</th>
-                  <th>Delete</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr v-for="employee in employees" :key="employee.id">
-                  <td>{{ employee.empId }}</td>
-                  <td>{{ employee.name }}</td>
-                  <td>{{ employee.surname }}</td>
-                  <td>{{ employee.position }}</td>
-                  <td>{{ employee.department }}</td>
-                  <td>
+            <v-table>
+            <thead>
+              <tr>
+                <th class="text-left">
+                  Employee_Id
+                </th>
+                <th class="text-left">
+                  Name
+                </th>
+                <th class="text-left">
+                  Surname
+                </th>
+                <th class="text-left">
+                  Position
+                </th>
+                <th class="text-left">
+                  Department
+                </th>
+                <th class="text-left">
+                  Update
+                </th>
+                <th class="text-left">
+                  Delete
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr v-for="employee in employees" :key="employee.id">
+                <td>{{ employee.empId }}</td>
+                <td>{{ employee.name }}</td>
+                <td>{{ employee.surname }}</td>
+                <td>{{ employee.position }}</td>
+                <td>{{ employee.department }}</td>
+                <td>
                     <!-- Pulsanti per aggiornare e eliminare un employee -->
                     <v-btn @click="updateDialog(employee)" color="primary" icon>
                       <v-icon>mdi-pencil</v-icon>
@@ -89,9 +103,9 @@
                       <v-icon>mdi-delete</v-icon>
                     </v-btn>
                   </td>
-                </tr>
-              </tbody>
-            </table>
+              </tr>
+            </tbody>
+          </v-table>
           </div>
         </v-container>
       </v-app>
