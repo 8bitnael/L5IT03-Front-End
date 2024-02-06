@@ -21,6 +21,7 @@
         <p>Employee ID: {{ foundEmployee.empId }}</p>
         <p>Name: {{ foundEmployee.name }}</p>
         <p>Surname: {{ foundEmployee.surname }}</p>
+        <p>Position: {{ foundEmployee.position }}</p>
         <p>Department: {{ foundEmployee.department }}</p>
       </v-col>
     </v-row>

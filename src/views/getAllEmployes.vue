@@ -11,9 +11,10 @@
           <table>
             <thead>
               <tr>
-                <th>Employee Id</th>
+                <th>Employee_Id</th>
                 <th>Name</th>
                 <th>Surname</th>
+                <th>Position</th>
                 <th>Department</th>
               <!--  <th>Actions</th> -->
               </tr>
@@ -23,6 +24,7 @@
                 <td>{{ employee.empId }}</td>
                 <td>{{ employee.name }}</td>
                 <td>{{ employee.surname }}</td>
+                <td>{{ employee.position }}</td>
                 <td>{{ employee.department }}</td>
              <!--   <td>
                   <v-btn @click="deleteEmployee(employee.id)" color="error" icon>

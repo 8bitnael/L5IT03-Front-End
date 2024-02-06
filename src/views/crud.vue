@@ -4,7 +4,7 @@
         <v-container>
           <v-card class="mb-12" color="surface-variant" variant="tonal">
             <v-card-text class="text-medium-emphasis text-caption">
-              D.Update and save employee information
+              D.Update and save employee information (insert )
               E.Mobile friendly (2.1)
             </v-card-text>
           </v-card>
@@ -24,6 +24,7 @@
                   <v-text-field v-model="newEmployee.empId" label="Employee ID" readonly></v-text-field>
                   <v-text-field v-model="newEmployee.name" label="Name"></v-text-field>
                   <v-text-field v-model="newEmployee.surname" label="Surname"></v-text-field>
+                  <v-text-field v-model="newEmployee.position" label="Position"></v-text-field>
                   <v-text-field v-model="newEmployee.department" label="Department"></v-text-field>
                   <!-- Pulsante di submit -->
                   <v-btn type="submit" color="success">Add</v-btn>
@@ -41,6 +42,7 @@
               <v-form ref="updateEmployeeForm" @submit.prevent="updateEmployee">
                 <v-text-field v-model="selectedEmployee.name" label="Name"></v-text-field>
                 <v-text-field v-model="selectedEmployee.surname" label="Surname"></v-text-field>
+                <v-text-field v-model="selectedEmployee.position" label="Position"></v-text-field>
                 <v-text-field v-model="selectedEmployee.department" label="Department"></v-text-field>
                 <!-- Pulsante di submit -->
                 <v-btn type="submit" color="primary">Update</v-btn>
@@ -58,6 +60,7 @@
                   <th>Name</th>
                   <th>Surname</th>
                   <th>Department</th>
+                  <th>Position</th>
                   <th>Update</th>
                   <th>Delete</th>
                 </tr>
@@ -67,6 +70,7 @@
                   <td>{{ employee.empId }}</td>
                   <td>{{ employee.name }}</td>
                   <td>{{ employee.surname }}</td>
+                  <td>{{ employee.position }}</td>
                   <td>{{ employee.department }}</td>
                   <td>
                     <!-- Pulsanti per aggiornare e eliminare un employee -->
@@ -103,6 +107,7 @@
           empId: '',
           name: "",
           surname: "",
+          position: "",
           department: "",
         },
         selectedEmployee: null,
@@ -156,6 +161,7 @@
         this.newEmployee = {
           name: "",
           surname: "",
+          position: "",
           department: "",
         };
       },
