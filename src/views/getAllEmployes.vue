@@ -4,7 +4,9 @@
       <v-container>
         <v-card class="mb-12" color="surface-variant" variant="tonal">
           <v-card-text class="text-medium-emphasis text-caption">
-           SELECT * FROM TABLE EMPLOYEES<br>
+            
+            <b> SQL QUERY: SELECT e.*, d.department_name FROM Employees e INNER JOIN Department d ON e.DepartmentId = d.department_id </b>
+           
           </v-card-text>
         </v-card>
         <div class="dashboard">

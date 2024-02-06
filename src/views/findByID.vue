@@ -2,7 +2,10 @@
   <v-container>
     <v-card class="mb-12" color="surface-variant" variant="tonal">
       <v-card-text class="text-medium-emphasis text-caption">
-        C.Enter employee ID and view employee information within the same page (2.2,2.3)<br>
+        <b> C.Enter employee ID and view employee information within the same page (2.2,2.3)<br>
+          <br>
+        SQL QUERY: SELECT e.*, d.department_name FROM Employees e INNER JOIN Department d ON e.DepartmentId = d.department_id WHERE e.Id = @Id</b>
+        
       </v-card-text>
     </v-card>
     <v-row>

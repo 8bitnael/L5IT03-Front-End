@@ -4,8 +4,14 @@
         <v-container>
           <v-card class="mb-12" color="surface-variant" variant="tonal">
             <v-card-text class="text-medium-emphasis text-caption">
-              D.Update and save employee information (insert )
-              E.Mobile friendly (2.1)
+              <b>  D.Update and save employee information (insert )
+              E.Mobile friendly (2.1)<br>
+              <br>
+           
+              INSERT: INSERT INTO Employees (Name, Surname, Position, DepartmentId) VALUES (@Name, @Surname, @Position, @DepartmentId)<br>
+              UPDATE: UPDATE Employees SET Name = @Name, Position = @Position WHERE Id = @Id<br>
+              DELETE: DELETE FROM Employees WHERE Id = @Id<br>
+            </b>
             </v-card-text>
           </v-card>
   
