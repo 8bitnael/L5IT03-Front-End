@@ -4,8 +4,8 @@
       <v-container>
         <v-card class="mb-12" color="surface-variant" variant="tonal">
           <v-card-text class="text-medium-emphasis text-caption">
-            <b> Design web applications using ASP.NET and ADO.NET2.1:
-            You are required to develop a web based solution for your organization to manage employee information. Using
+            <b> Design web applications using ASP.NET and ADO.NET<br> 
+              2.1: You are required to develop a web based solution for your organization to manage employee information. Using
             ASP.NET and ADO.NET develop the following functionalities.<br>
             B.Assuming logins are already stored in the database, a login page for admins to login in each department
             (2.3)<br>
