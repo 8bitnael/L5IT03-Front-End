@@ -2,7 +2,7 @@
     <v-container class="fill-height">
       <v-card class="mb-12" color="surface-variant" variant="tonal">
           <v-card-text class="text-medium-emphasis text-caption">
-            A.Attractive web interface where each department can customize their theme accordingly (2.1)<br>
+            <b>  A.Attractive web interface where each department can customize their theme accordingly (2.1) </b><br>
           </v-card-text>
       </v-card>
 
