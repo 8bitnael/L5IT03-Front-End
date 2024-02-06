@@ -8,7 +8,7 @@ const routes = [
     children: [
       {
         path: '',
-        name: 'LOGIN',
+        name: 'A login page for admins to login in each department(2.3)',
         component: () => import('@/views/login.vue'),
       }
     ],
@@ -20,7 +20,7 @@ const routes = [
     children: [
       {
         path: '',
-        name: 'CUSTOMIZE(2.1)',
+        name: 'Each department can customize their theme(2.1)',
         component: () => import('@/views/customize.vue'),
       }
     ],
@@ -42,7 +42,7 @@ const routes = [
     children: [
       {
         path: '',
-        name: 'FIND BY ID',
+        name: 'View employee information within the same page (2.2,2.3)',
         component: () => import('@/views/findByID.vue'),
       }
     ],
@@ -53,7 +53,7 @@ const routes = [
     children: [
       {
         path: '',
-        name: 'ADD, UPDATE & DELETE EMPLOYEES',
+        name: 'Update and save employee information',
         component: () => import('@/views/crud.vue'),
       }
     ],
